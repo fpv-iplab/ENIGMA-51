@@ -19,7 +19,7 @@
 This script is designed to visualize object and hand keypoints with mask annotations using preprocessed data files. It utilizes various libraries like OpenCV, NumPy, Matplotlib, and Torch to load and display the data. The script assumes that you have already downoloaded the required JSON and npy files, as it loads them to visualize the annotations.
 Hands keypoint            |  Object and hand mask
 :-------------------------:|:-------------------------:
-![](./Images/keypoint.pngkeypoint.png)  |  ![](./Images/masks.png)
+![](./Images/keypoint.png)  |  ![](./Images/masks.png)
 
 ### Prerequisites🛠️
 
