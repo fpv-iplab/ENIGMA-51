@@ -1,1 +1,158 @@
-
+AVERAGE_TOP_K_CHECKPOINTS: 1
+BN:
+  EPSILON: 1e-05
+  MOMENTUM: 0.1
+  NORM_TYPE: batchnorm
+  NUM_BATCHES_PRECISE: 200
+  NUM_SPLITS: 1
+  NUM_SYNC_DEVICES: 1
+  USE_PRECISE_STATS: False
+  WEIGHT_DECAY: 0.0
+CHECKPOINT_FILE_PATH: 
+CHECKPOINT_LOAD_MODEL_HEAD: True
+DATA:
+  FAST:
+    MEAN: [0.45, 0.45, 0.45]
+    NUM_FRAMES: 16
+    SAMPLING_RATE: 1
+    STD: [0.225, 0.225, 0.225]
+  STILL:
+    FAST_TO_STILL_SIZE_RATIO: 0.32
+    MAX_SIZE: 1333
+    MEAN: [0.485, 0.456, 0.406]
+    MIN_SIZE: [640, 672, 704, 736, 768, 800]
+    STD: [0.229, 0.224, 0.225]
+DATA_LOADER:
+  NUM_WORKERS: 4
+  PIN_MEMORY: True
+EGO4D_STA:
+  ANNOTATION_DIR: /path/to/the/annotations/dir/
+  FAST_LMDB_PATH: /path/to/the/lmdb/
+  STILL_FRAMES_PATH: /path/to/the/frames/
+  TEST_LISTS: ['sta_test.json']
+  TRAIN_LISTS: ['sta_train.json']
+  VAL_LISTS: ['sta_val.json']
+ENABLE_LOGGING: True
+EXPERIMENT_NAME: StillFast_enigma-51
+FAST_DEV_RUN: False
+MODEL:
+  BRANCH: Still
+  FAST:
+    BACKBONE:
+      NAME: x3d_m
+      PRETRAINED: True
+      TEMPORAL_CAUSAL_CONV3D: False
+  LOSS:
+    NOUN: cross_entropy
+    TTC: smooth_l1
+    VERB: cross_entropy
+    WEIGHTS:
+      NAO: 1
+      NOUN: 1.0
+      TTC: 0.5
+      VERB: 0.1
+  NAME: StillFast
+  NOUN_CLASSES: 25
+  STILL:
+    BACKBONE:
+      NAME: resnet50
+      PRETRAINED: True
+      TRAINABLE_LAYERS: 3
+    BOX:
+      BATCH_SIZE_PER_IMAGE: 256
+      BG_IOU_THRESH: 0.5
+      DETECTIONS_PER_IMG: 100
+      FG_IOU_THRESH: 0.5
+      NMS_THRESH: 0.5
+      POOLER_SAMPLING_RATIO: 0
+      POSITIVE_FRACTION: 0.25
+      PREDICTOR_REPRESENTATION_SIZE: 1024
+      REG_WEIGHTS: (10.0, 10.0, 5.0, 5.0)
+      SCORE_THRESH: 0.05
+    PRETRAINED: True
+    REPLACE_HEAD: True
+    RPN:
+      ANCHOR_GENERATOR: None
+      BATCH_SIZE_PER_IMAGE: 256
+      BG_IOU_THRESH: 0.3
+      FG_IOU_THRESH: 0.7
+      HEAD: None
+      NMS_THRESH: 0.7
+      POSITIVE_FRACTION: 0.5
+      POST_NMS_TOP_N_TEST: 1000
+      POST_NMS_TOP_N_TRAIN: 2000
+      PRE_NMS_TOP_N_TEST: 1000
+      PRE_NMS_TOP_N_TRAIN: 2000
+      SCORE_THRESH: 0.0
+  STILLFAST:
+    FUSION:
+      CONVOLUTIONAL_FUSION_BLOCK:
+        CONV_BLOCK_ARCHITECTURE: simple_convolution
+        GATING_BLOCK: None
+        POOLING: mean
+        POOLING_FRAMES: 16
+        POST_SUM_CONV_BLOCK: True
+        POST_UP_CONV_BLOCK: True
+        TEMPORAL_NONLOCAL_POOLING:
+          INTER_CHANNELS: half
+          MAX_HEIGHT_BEFORE_POOLING: 16
+      FUSION_BLOCK: convolutional
+      LATERAL_CONNECTIONS: False
+      NONLOCAL_FUSION_BLOCK:
+        INTER_CHANNELS: half
+        MAX_HEIGHT_BEFORE_POOLING_3D: 16
+        MAX_HEIGHT_BEFORE_SCALING_2D: 128
+        POST_SUM_CONV_BLOCK: True
+        SCALING_2D_MODE: nearest
+      POST_PYRAMID_FUSION: False
+      PRE_PYRAMID_FUSION: True
+    ROI_HEADS:
+      V2_OPTIONS:
+        FUSION: concat_residual
+        VERB_TOPK: 1
+      VERSION: v2
+  TTC_PREDICTOR: regressor
+  VERB_CLASSES: 4
+NUM_DEVICES: 4
+NUM_SHARDS: 1
+OUTPUT_DIR: ./output
+SAVE_TOP_K: 1
+SOLVER:
+  ACCELERATOR: gpu
+  BASE_LR: 0.001
+  BENCHMARK: False
+  DAMPENING: 0.0
+  GAMMA: 0.1
+  LR_POLICY: multistep_warmup
+  MAX_EPOCH: 20
+  MILESTONES: [15, 30]
+  MOMENTUM: 0.9
+  NESTEROV: True
+  OPTIMIZING_METHOD: sgd
+  PRECISION: 16
+  REPLACE_SAMPLER_DDP: False
+  STRATEGY: ddp
+  WARMUP_STEPS: 2000
+  WEIGHT_DECAY: 0.0001
+TASK: sta
+TEST:
+  BATCH_SIZE: 4
+  DATASET: Ego4dShortTermAnticipationStillVideo
+  ENABLE: False
+  GROUP_BATCH_SAMPLER: False
+  OUTPUT_JSON: None
+TRAIN:
+  AUGMENTATIONS:
+    RANDOM_HORIZONTAL_FLIP: True
+  BATCH_SIZE: 32
+  DATASET: Ego4dShortTermAnticipationStillVideo
+  ENABLE: True
+  GROUP_BATCH_SAMPLER: False
+  WEIGHTED_SAMPLER: False
+VAL:
+  BATCH_SIZE: 8
+  DATASET: Ego4dShortTermAnticipationStillVideo
+  ENABLE: False
+  GROUP_BATCH_SAMPLER: False
+  OUTPUT_JSON: None
+WANDB_RUN: /to/set/
