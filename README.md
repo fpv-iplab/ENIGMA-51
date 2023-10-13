@@ -34,7 +34,7 @@ If you find our work useful in your research, please use the following BibTeX en
 We provided the best model trained on the Training Set of the ENIGMA-51 Dataset.
 | architecture | model | config |
 | ------------- | ------------- | -------------| 
-| StillFast | [link]() | configs/STA_config.yaml |
+| StillFast | [link](https://iplab.dmi.unict.it/sharing/ENIGMA-51/StillFast_ENIGMA-51_epoch_19.ckpt) | configs/STA_config.yaml |
 
 Please, refer to the official page of [StillFast](https://github.com/fpv-iplab/stillfast) for additional details.
 ### 4) NLU of Intents and Entities
