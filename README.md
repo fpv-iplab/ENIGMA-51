@@ -2,7 +2,7 @@
 This is the official github repository related to the ENIGMA-51 Dataset.
 
 <div align="center">
-  <img src="images/ENIGMA-51.gif"/>
+  <img src="images/enigma_16_videos_compressed.gif"/>
 </div>
 
 ENIGMA-51 is a new egocentric dataset composed of 51 videos acquired in an industrial laboratory. The subjects interact with industrial tools such as an electric screwdriver and pliers, as well as with electronic instruments such as a power supply and an oscilloscope while executing the steps to complete the procedure. ENIGMA-51 has been annotated with a rich set of annotations which allows to study large variety of tasks, especially tasks related to human-object interactions.
