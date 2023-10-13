@@ -1,7 +1,20 @@
 
 
 
-## Add section here:
+## Model Zoo and Baselines:
+### 1) Untrimmed Action Detection
+### 2) Egocentric Human-Object Interaction Detection
+
+### 3) Short-Term Object Interaction Anticipation
+
+#### StillFast model
+We provided the best model trained on the Training Set of the ENIGMA-51 Dataset.
+| architecture | model | config |
+| ------------- | ------------- | -------------| 
+| StillFast | [link]() | configs/STA/STA_config.yaml |
+
+Please, refer to the official page of [StillFast](https://github.com/fpv-iplab/stillfast) for additional details.
+### 4) NLU of Intents and Entities
 .
 .
 .
