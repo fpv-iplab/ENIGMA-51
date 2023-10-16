@@ -24,11 +24,28 @@ If you find our work useful in your research, please use the following BibTeX en
 
 ```
 
-## Model Zoo and Baselines:
-### 1) Untrimmed Action Detection
-### 2) Egocentric Human-Object Interaction Detection
+## Table of Contents
 
-### 3) Short-Term Object Interaction Anticipation
+* [Model Zoo and Baselines](#model-zoo-and-baselines)
+* [Visualization Script for Object and Hand Keypoints with Mask Annotations](#visualization-script-for-object-and-hand-keypoints-with-mask-annotations)
+
+
+## Model Zoo and Baselines:
+
+* [Untrimmed Action Detection](#untrimmed-action-detection)
+* [Egocentric Human-Object Interaction Detection](#egocentric-human-object-interaction-detection)
+* [Short-Term Object Interaction Anticipation](#short-term-object-interaction-anticipation)
+* [NLU of Intents and Entities](#nlu-of-intents-and-entities)
+
+## Untrimmed Action Detection
+
+This section describes the Untrimmed Action Detection task and our proposed approach.
+
+## Egocentric Human-Object Interaction Detection
+
+This section describes the Egocentric Human-Object Interaction Detection task and our proposed approach.
+
+## Short-Term Object Interaction Anticipation
 
 #### StillFast model
 We provided the best model trained on the Training Set of the ENIGMA-51 Dataset.
@@ -37,18 +54,10 @@ We provided the best model trained on the Training Set of the ENIGMA-51 Dataset.
 | StillFast | [link](https://iplab.dmi.unict.it/sharing/ENIGMA-51/StillFast_ENIGMA-51_epoch_19.ckpt) | configs/STA_config.yaml |
 
 Please, refer to the official page of [StillFast](https://github.com/fpv-iplab/stillfast) for additional details.
-### 4) NLU of Intents and Entities
-.
-.
-.
 
+## NLU of Intents and Entities
 
-
-
-
-
-
-
+This section describes the NLU of Intents and Entities task and our proposed approach.
 
 ## Visualization Script for Object and Hand Keypoints with Mask Annotations
 
