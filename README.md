@@ -95,7 +95,7 @@ python ./train.py ./configs/enigma_ht_hr.yaml --output reproduce
 ```shell
 python ./eval.py ./configs/enigma_ht_hr.yaml ./ckpt/enigma_ht_hr_reproduce --saveonly
 ```
-* To evaluate the trained model, you should run the [mp_mAP.py](UAD/mp_mAP.py) file, specifying the path to the prediction file, and the path to the testing ground truth file. For more details, please refer to the [mp_mAP.py](UAD/mp_mAP.py).py file.
+* To evaluate the trained model, you should run the [mp_mAP.py](UAD/mp_mAP/mp_mAP.py) file, specifying the path to the prediction file, and the path to the testing ground truth file. For more details, please refer to the [mp_mAP.py](UAD/mp_mAP/mp_mAP.py).py file.
 
 ### Evaluating on Our Pre-trained Model
 
@@ -128,7 +128,7 @@ This folder
 ```shell
 python ./eval.py ./configs/enigma_ht_hr.yaml ./pretrained/enigma/ht_hr --saveonly
 ```
-* To evaluate the trained model, you should run the [mp_mAP.py](UAD/mp_mAP.py) file, specifying the path to the prediction file, and the path to the testing ground truth file. For more details, please refer to the [mp_mAP.py](UAD/mp_mAP.py).py file.
+* To evaluate the trained model, you should run the [mp_mAP.py](UAD/mp_mAP/mp_mAP.py) file, specifying the path to the prediction file, and the path to the testing ground truth file. For more details, please refer to the [mp_mAP.py](UAD/mp_mAP/mp_mAP.py).py file.
 
 
 ## Egocentric Human-Object Interaction Detection
