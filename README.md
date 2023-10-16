@@ -39,7 +39,97 @@ If you find our work useful in your research, please use the following BibTeX en
 
 ## Untrimmed Action Detection
 
-This section describes the Untrimmed Action Detection task and our proposed approach.
+### Introduction
+The instructions below will guide you on replicating the baseline for the Untrimmed Action Detection task or training your own model.
+The baseline is based on [ActionFormer](https://arxiv.org/abs/2202.07925), refer to the [official repository](https://github.com/happyharrycn/actionformer_release) for more details.
+
+### Download Features, Annotations, and other needed files
+* Download *enigma_UAD.tar.gz* from [this link](https://iplab.dmi.unict.it/fpv/).
+* The file includes features, action annotations in JSON format, the custom dataset file (.py), and 3 different config files for each task variant (ht_hr, fc_hd, ht_hr_fc_hd).
+
+**Details**: The features are extracted from a two-stream network pretrained on ActivityNet. Each video chunk is set to a size of 6, and there is no overlapping between adjacent chunks. With a video frame rate of 30, we get 5 chunks per second. For appearance features, we extract data from the Flatten 673 layer of ResNet-200 from the central frame of each chunk. Motion features are extracted from the global pool layer of BN-Inception from optical flow fields computed from the 6 consecutive frames within each chunk. Motion and appearance features are then concatenated.
+
+**Needed steps**
+* Features and annotations should be placed under *./data/enigma*
+* Config files should be placed under *./configs*
+* The custom dataset file should be placed under *./libs/datasets*
+* In the `libs/datasets/__init__.py` file, include the import of `enigma` (the dataset name in the custom dataset file set within `@register_dataset()`).
+* In the `eval.py` file, replace all the instances of **"val_split"** with **"test_split"**.
+
+The folder structure should look like this: 
+```
+This folder
+│   README.md
+│   ...  
+|
+└───configs/
+│    └───enigma_ht_hr_fc_hd.json
+│    └───enigma_ht_hr.json
+│    └───enigma_fc_hd.json
+│    └───...
+|
+└───data/
+│    enigma/
+│    │   └───annotations
+│    │        └───enigma_ht_hr_fc_hd.json
+│    │        └───enigma_ht_hr.json
+│    │        └───enigma_fc_hd.json
+│    │   └───features   
+│    └───...
+|
+└───libs/
+|     └───datasets
+|     |      └───enigma.py
+│     |      └───...
+│     └───...
+│   ...
+```
+
+### Training and Evaluation
+* Choose the config file for training ActionFormer on ENIGMA-51.
+* Train the ActionFormer network. This will create an experiment folder under *./ckpt* that stores training config, logs, and checkpoints.
+```shell
+python ./train.py ./configs/enigma_ht_hr.yaml --output reproduce
+```
+* Save the predictions of the trained model by running this script.
+```shell
+python ./eval.py ./configs/enigma_ht_hr.yaml ./ckpt/enigma_ht_hr_reproduce --saveonly
+```
+* To evaluate the trained model, you should run the mp_mAP.py file, specifying the path to the prediction file, and the path to the testing ground truth file. For more details, please refer to the mp_mAP.py file.
+
+### Evaluating on Our Pre-trained Model
+
+We also provide the pre-trained models for the 3 different variants of the task (ht_hr, fc_hd, ht_hr_fc_hd). The models with the relative configs can be downloaded from [this link](https://iplab.dmi.unict.it/fpv/). To evaluate the pre-trained model, please follow the steps listed below.
+
+* Move the config files to the config folder or specify the right path in the script below.
+* Create a folder *./pretrained*, then a folder for each task variant and move the weight file under them.
+* The folder structure should look like
+```
+This folder
+│   README.md
+│   ...  
+│
+└───pretrained/
+│    └───enigma/
+│    |   └───ht_hr
+│    |    └───...    
+│    |   └───fc_hd
+│    |    └───... 
+│    |   └───ht_hr_fc_hd
+│    |    └───...
+│    |    
+│    └───...
+|
+└───libs
+│
+│   ...
+```
+* Save the predictions of the trained model by running this script.
+```shell
+python ./eval.py ./configs/enigma_ht_hr.yaml ./pretrained/enigma/ht_hr --saveonly
+```
+* To evaluate the trained model, you should run the mp_mAP.py file, specifying the path to the prediction file, and the path to the testing ground truth file. For more details, please refer to the mp_mAP.py file.
+
 
 ## Egocentric Human-Object Interaction Detection
 
