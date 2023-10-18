@@ -132,8 +132,23 @@ python ./eval.py ./configs/enigma_ht_hr.yaml ./pretrained/enigma/ht_hr --saveonl
 
 
 ## Egocentric Human-Object Interaction Detection
+The instructions below will guide you on replicating the baseline for the Egocentric Human-Object Interaction Detection task.
+The baseline is based on [egoism-hoi](https://github.com/NextVisionLab/egoism-hoi), refer to the official repository for more details.
 
-This section describes the Egocentric Human-Object Interaction Detection task and our proposed approach.
+To train the model enter the following command:
+```shell
+python train.py --config PATH_OF_CFG --train_json PATH_OF_EHOI_TRAIN_ANNS --test_json PATH_OF_EHOI_VAL_ANNS --test_dataset_names enigma_val
+```
+
+To test the models run the command below:
+```shell
+python test.py --dataset_json PATH_TEST_ANNS --dataset_images PATH_TEST_IMGS --weights_path WEIGHTS_PATH
+```
+
+We provided the best model trained on the Training Set of the ENIGMA-51 Dataset.
+| architecture | model | config |
+| ------------- | ------------- | -------------| 
+| egoism-hoi | [link](https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_model_ehoi.zip) | configs/cfg_ehoi.yaml |
 
 ## Short-Term Object Interaction Anticipation
 
