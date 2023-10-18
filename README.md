@@ -44,7 +44,7 @@ The instructions below will guide you on replicating the baseline for the Untrim
 The baseline is based on [ActionFormer](https://arxiv.org/abs/2202.07925), refer to the [official repository](https://github.com/happyharrycn/actionformer_release) for more details.
 
 ### Download Features, Annotations, and other needed files
-* Download *enigma_UAD.tar.gz* from [this link](https://iplab.dmi.unict.it/fpv/).
+* Download *enigma_UAD.tar.gz* from [this link](https://iplab.dmi.unict.it/sharing/ENIGMA-51/UAD.tar.gz).
 * The file includes features, action annotations in JSON format, the custom dataset file (.py), and 3 different config files for each task variant (ht_hr, fc_hd, ht_hr_fc_hd).
 
 **Details**: The features are extracted from a two-stream network pretrained on ActivityNet. Each video chunk is set to a size of 6, and there is no overlapping between adjacent chunks. With a video frame rate of 30, we get 5 chunks per second. For appearance features, we extract data from the Flatten 673 layer of ResNet-200 from the central frame of each chunk. Motion features are extracted from the global pool layer of BN-Inception from optical flow fields computed from the 6 consecutive frames within each chunk. Motion and appearance features are then concatenated.
@@ -99,7 +99,7 @@ python ./eval.py ./configs/enigma_ht_hr.yaml ./ckpt/enigma_ht_hr_reproduce --sav
 
 ### Evaluating on Our Pre-trained Model
 
-We also provide the pre-trained models for the 3 different variants of the task (ht_hr, fc_hd, ht_hr_fc_hd). The models with the relative configs can be downloaded from [this link](https://iplab.dmi.unict.it/fpv/). To evaluate the pre-trained model, please follow the steps listed below.
+We also provide the pre-trained models for the 3 different variants of the task (ht_hr, fc_hd, ht_hr_fc_hd). The models with the relative configs can be downloaded from [this link](https://iplab.dmi.unict.it/sharing/ENIGMA-51/UAD_pretrained.tar.gz). To evaluate the pre-trained model, please follow the steps listed below.
 
 * Move the config files to the config folder or specify the right path in the script below.
 * Create a folder *./pretrained*, then a folder for each task variant and move the weight file under them.
