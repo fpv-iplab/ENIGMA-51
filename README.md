@@ -162,7 +162,38 @@ Please, refer to the official page of [StillFast](https://github.com/fpv-iplab/s
 
 ## NLU of Intents and Entities
 
-This section describes the NLU of Intents and Entities task and our proposed approach.
+The instructions below will guide you on replicating the baseline for the NLU of Intents and Entities task.
+
+Set up a new Conda environment and a brand new RASA project running the commands below: 
+```shell
+conda create -n rasaenv python=3.7
+conda activate rasaenv
+pip3 install -U --user pip && pip install rasa==3.4
+pip3 install -U spacy
+python3 -m spacy download en_core_web_sm
+rasa init
+```
+
+In your RASA project folder, overwrite the `config.yml` and `domain.yml` with our provided configuration and domain files.
+Inside the `data` folder, put your training/test data and overwrite the `rules.yml` with our provided rules file.
+Put our model inside the `models` folder. 
+
+We provided the best model trained on the Training Set of the ENIGMA-51 utterances annotations.
+| architecture | model | config |
+| ------------- | ------------- | -------------| 
+| DIETClassifier | [link](https://iplab.dmi.unict.it/sharing/ENIGMA-51/StillFast_ENIGMA-51_epoch_19.ckpt) | configs/NLU_config.yml |
+
+To train the model enter the following command:
+```shell
+rasa train nlu --nlu data/your_training_data.yml -c config/nlu_config.yml
+```
+
+To test the models run the command below:
+```shell
+rasa test nlu --nlu data/your_test_data.yml -c config/nlu_config.yml
+```
+
+Please, refer to the official page of [RASA CLI](https://rasa.com/docs/rasa/command-line-interface/) for additional details.
 
 ## Visualization Script for Object and Hand Keypoints with Mask Annotations
 
