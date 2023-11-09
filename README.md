@@ -174,8 +174,8 @@ python3 -m spacy download en_core_web_sm
 rasa init
 ```
 
-In your RASA project folder, overwrite the `config.yml` and `domain.yml` with our provided configuration and [domain]() files.
-Inside the `data` folder, put your training/test data and overwrite the `rules.yml` with our provided [rules]() file.
+In your RASA project folder, overwrite the `config.yml` and `domain.yml` with our provided configuration and [domain](configs/domain.yml) files.
+Inside the `data` folder, put your training/test data and overwrite the `rules.yml` with our provided [rules](configs/rules.yml) file.
 Put our model inside the `models` folder. 
 
 We provided the best model trained on the Training Set of the ENIGMA-51 utterances annotations.
