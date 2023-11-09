@@ -1,0 +1,113 @@
+version: "3.4"
+
+rules:
+
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
+- rule: procedure-related questions
+  steps:
+  - or: 
+    - intent: procedure_tutorial
+    - intent: which_ppe_procedure
+    - intent: start
+  - action: action_store_intent
+  - action: procedure_form
+  - active_loop: procedure_form
+
+- rule: handles post-form answers for procedure-related questions
+  condition: 
+  - active_loop: procedure_form
+  steps:
+  - action: procedure_form
+  - active_loop: null
+  - action: action_choose_response_procedure
+
+- rule: object-related questions
+  steps:
+  - or:
+    - intent: object_warnings
+    - intent: turn_object_on
+    - intent: turn_object_off
+    - intent: which_ppe_object
+    - intent: object_instructions
+    - intent: is_object_on
+    - intent: object_time
+    - intent: where_object
+  - action: action_store_intent
+  - action: object_form
+  - active_loop: object_form
+
+- rule: handles post-form answers for object-related questions
+  condition: 
+  - active_loop: object_form
+  steps:
+  - action: object_form
+  - active_loop: null
+  - action: action_choose_response_object
+
+- rule: board-related questions
+  steps:
+  - intent: where_board
+  - action: action_store_intent
+  - action: board_form
+  - active_loop: board_form
+
+- rule: handles post-form answers for board-related questions
+  condition: 
+  - active_loop: board_form
+  steps:
+  - action: board_form
+  - active_loop: null
+  - action: action_choose_response_board
+
+- rule: board component-related questions
+  steps:
+  - intent: board_detail
+  - action: action_store_intent
+  - action: board_detail_form
+  - active_loop: board_detail_form
+
+- rule: handles post-form answers for board component-related questions
+  condition: 
+  - active_loop: board_detail_form
+  steps:
+  - action: board_detail_form
+  - active_loop: null
+  - action: action_choose_response_board_detail
+
+- rule: object component-related questions
+  steps:
+  - intent: object_detail
+  - action: action_store_intent
+  - action: object_detail_form
+  - active_loop: object_detail_form
+
+- rule: handles post-form answers for object component-related questions
+  condition:
+  - active_loop: object_detail_form
+  steps:
+  - action: object_detail_form
+  - active_loop: null
+  - action: action_choose_response_object_detail_form
+
+- rule: faq questions
+  steps: 
+  - intent: faq
+  - action: utter_faq
+
+- rule: next/previous/repeat
+  steps:
+  - or:
+    - intent: next
+    - intent: previous
+    - intent: repeat
+  - action: action_store_intent
+  - action: action_choose_response_procedure
+
+- rule: out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope

@@ -1,0 +1,131 @@
+version: "3.4"
+
+intents:
+  - greet
+  - procedure_tutorial
+  - object_warnings
+  - turn_object_on
+  - turn_object_off
+  - faq
+  - which_ppe_procedure
+  - which_ppe_object
+  - object_instructions
+  - is_object_on
+  - object_time
+  - where_board
+  - board_detail
+  - where_object
+  - object_detail
+  - start
+  - next
+  - previous
+  - repeat
+  - inform
+  - out_of_scope
+
+entities:
+  - procedure
+  - object
+  - component 
+  - board
+
+slots:
+  procedure:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: procedure
+  object:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: object
+  object_from_text:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: object
+  object_from_image:
+    type: text
+    mappings:
+    - type: custom
+  component:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: component
+  board:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: board
+  procedure_step:
+    type: float
+    mappings:
+    - type: custom
+  original_intent:
+    type: text
+    mappings: 
+    - type: custom
+
+forms:
+  procedure_form:
+    required_slots:
+      - procedure
+      - board
+  object_form:
+    required_slots:
+      - object_from_image
+      - object_from_text
+  object_detail_form:
+    required_slots:
+      - object
+      - component
+  board_form:
+    required_slots:
+      - board
+  board_detail_form:
+    required_slots:
+      - board
+      - component
+
+actions: 
+  - utter_greet
+  - utter_faq
+  - utter_out_of_scope
+  - action_choose_response_procedure
+  - action_choose_response_object
+  - action_choose_response_object_detail
+  - action_choose_response_board
+  - action_choose_response_board_detail
+  - action_store_intent
+  - validate_object_form
+
+responses:
+  utter_greet:
+  - text: Hi! How can I help you?
+  utter_faq/all_objects:
+  - text: The objects available in the laboratory are the power supply, the oscilloscope, the soldering iron, the electric screwdriver, the screwdriver, and the pliers.
+    image: https://www.nomadfoods.com/wp-content/uploads/2018/08/placeholder-1-e1533569576673-1500x1500.png
+  utter_faq/ok_objects: #TODO: custom action
+  - text: The powered objects you can use with your PPE are the oscilloscope and the power supply.
+  utter_faq/on_object: #TODO: custom action
+  - text: The powered objects are the soldering iron and the oscilloscope. 
+  utter_faq/where-ppe:
+  - text: You can find the PPE in the lowest shelf of the locker. 
+  utter_ask_procedure:
+  - text: Which procedure?
+  utter_ask_object_from_image:
+  - text: Which object (image)?
+  utter_ask_object_from_text:
+  - text: Which object (text)?
+  utter_ask_board:
+  - text: Which board?
+  utter_ask_component:
+  - text: Which component?
+  utter_out_of_scope:
+  - text: I don't know how to answer this kind of question. 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
