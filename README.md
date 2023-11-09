@@ -181,7 +181,7 @@ Put our model inside the `models` folder.
 We provided the best model trained on the Training Set of the ENIGMA-51 utterances annotations.
 | architecture | model | config |
 | ------------- | ------------- | -------------| 
-| DIETClassifier | [link]() | configs/NLU_config.yml |
+| DIETClassifier | [link](https://iplab.dmi.unict.it/sharing/ENIGMA-51/DIETClassifier_ENIGMA-51.gz) | configs/NLU_config.yml |
 
 To train the model enter the following command:
 ```shell
