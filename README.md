@@ -16,7 +16,7 @@ If you find our work useful in your research, please use the following BibTeX en
 @article{ragusa2023enigma51,
   title={ENIGMA-51: Towards a Fine-Grained Understanding of Human-Object Interactions in Industrial Scenarios}, 
     author={Francesco Ragusa and Rosario Leonardi and Michele Mazzamuto and Claudia Bonanno and Rosario Scavo and Antonino Furnari and Giovanni Maria Farinella},
-  journal   = {{WACV}},
+  journal   = {IEEE Winter Conference on Application of Computer Vision (WACV)},
   year      = {2024}
 }
 
