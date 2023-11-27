@@ -30,15 +30,15 @@ If you find our work useful in your research, please use the following BibTeX en
 
 ## Model Zoo and Baselines:
 
-* [Untrimmed Action Detection](#untrimmed-action-detection)
+* [Untrimmed Temporal Detection of Human-Object Interactions](#untrimmed-action-detection)
 * [Egocentric Human-Object Interaction Detection](#egocentric-human-object-interaction-detection)
 * [Short-Term Object Interaction Anticipation](#short-term-object-interaction-anticipation)
 * [NLU of Intents and Entities](#nlu-of-intents-and-entities)
 
-## Untrimmed Action Detection
+## Untrimmed Temporal Detection of Human-Object Interactions
 
 ### Introduction
-The instructions below will guide you on replicating the baseline for the Untrimmed Action Detection task or training your own model.
+The instructions below will guide you on replicating the baseline for the Untrimmed Temporal Detection of Human-Object Interactions task or training your own model.
 The baseline is based on [ActionFormer](https://arxiv.org/abs/2202.07925), refer to the [official repository](https://github.com/happyharrycn/actionformer_release) for more details.
 
 ### Download Features, Annotations, and other needed files
