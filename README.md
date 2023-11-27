@@ -14,10 +14,10 @@ You can download the ENIGMA-51 dataset and its annotations from the [project web
 If you find our work useful in your research, please use the following BibTeX entry for citation.
 ```
 @article{ragusa2023enigma51,
-  title={ENIGMA-51: Towards a Fine-Grained Understanding of Human-Object Interactions in Industrial Scenarios}, 
-    author={Francesco Ragusa and Rosario Leonardi and Michele Mazzamuto and Claudia Bonanno and Rosario Scavo and Antonino Furnari and Giovanni Maria Farinella},
-  journal   = {IEEE Winter Conference on Application of Computer Vision (WACV)},
-  year      = {2024}
+  title={ENIGMA-51: Towards a Fine-Grained Understanding of Human-Object Interactions in Industrial Scenarios},
+  author={Francesco Ragusa and Rosario Leonardi and Michele Mazzamuto and Claudia Bonanno and Rosario Scavo and Antonino Furnari and Giovanni Maria Farinella},
+  journal={IEEE Winter Conference on Application of Computer Vision (WACV)},
+  year={2024}
 }
 
 ```
