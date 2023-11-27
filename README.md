@@ -13,13 +13,11 @@ You can download the ENIGMA-51 dataset and its annotations from the [project web
 ## Citing the ENIGMA-51 Dataset
 If you find our work useful in your research, please use the following BibTeX entry for citation.
 ```
-@misc{ragusa2023enigma51,
-    title={ENIGMA-51: Towards a Fine-Grained Understanding of Human-Object Interactions in Industrial Scenarios}, 
+@article{ragusa2023enigma51,
+  title={ENIGMA-51: Towards a Fine-Grained Understanding of Human-Object Interactions in Industrial Scenarios}, 
     author={Francesco Ragusa and Rosario Leonardi and Michele Mazzamuto and Claudia Bonanno and Rosario Scavo and Antonino Furnari and Giovanni Maria Farinella},
-    year={2023},
-    eprint={2309.14809},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+  journal   = {{WACV}},
+  year      = {2024}
 }
 
 ```
