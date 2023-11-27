@@ -30,7 +30,7 @@ If you find our work useful in your research, please use the following BibTeX en
 
 ## Model Zoo and Baselines:
 
-* [Untrimmed Temporal Detection of Human-Object Interactions](#untrimmed-action-detection)
+* [Untrimmed Temporal Detection of Human-Object Interactions](#untrimmed-temporal-detection-of-human-object-interactions)
 * [Egocentric Human-Object Interaction Detection](#egocentric-human-object-interaction-detection)
 * [Short-Term Object Interaction Anticipation](#short-term-object-interaction-anticipation)
 * [NLU of Intents and Entities](#nlu-of-intents-and-entities)
