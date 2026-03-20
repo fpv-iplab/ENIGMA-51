@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ENIGMA-51</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <div class="container col-9 col-lg-4 m-0 justify-content-start">
+            <a href="https://www.unict.it/" class="col-4 col-lg-4" target="_blank">
+                <img class="img-fluid" src="./img/loghi/UniCT-Logo-Nero.png">
+            </a>
+            <a href="https://www.nextvisionlab.it/" class="col-4 col-lg-4" target="_blank">
+                <img class="img-fluid" src="./img/loghi/next_vision_logo.png">
+            </a>
+        </div>
+
+        <button type="button" class="navbar-toggler m-2" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="#abstract" class="nav-item nav-link">Abstract</a>
+                <a href="#annotation" class="nav-item nav-link">Dataset</a>
+                <a href="#dataset" class="nav-item nav-link">Annotations</a>
+                <a href="#download" class="nav-item nav-link">Download</a>
+                <!-- <a href="#approach" class="nav-item nav-link">Tasks</a>-->
+                <a href="#paper" class="nav-item nav-link">Paper</a>
+                <a href="#supp" class="nav-item nav-link">Supp. Material</a>
+                <a href="#people" class="nav-item nav-link">People</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Abstract Start -->
+    <div class="container-fluid p-0 mb-5 position-relative">
+        <a class="anchor" id="abstract"></a>
+        <img class="img-fluid" src="img/images_examples.jpg" alt="">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+            <div class="container d-none d-lg-block">
+                <div class="row justify-content-start">
+                    <div class="col-sm-12 col-lg-8">
+                        <h1 class="text-white animated slideInDown">Abstract</h1>
+                        <h4 class="text-primary mb-3 animated slideInDown">ENIGMA-51: Towards a Fine-Grained Understanding of Human Behavior in Industrial Scenarios</h4>
+                        <p class="text-white mb-4 pb-2 animated slideInRight justify">ENIGMA-51 is a new egocentric dataset acquired in an industrial scenario by 19 subjects who followed instructions to complete the repair of electrical boards using industrial tools (e.g., electric screwdriver) and equipments (e.g., oscilloscope). The 51 egocentric video sequences are densely annotated with a rich set of labels that enable the systematic study of human behavior in the industrial domain. We provide benchmarks on four tasks related to human behavior: 1) untrimmed temporal detection of human-object interactions, 2) egocentric human-object interaction detection, 3) short-term object interaction anticipation and 4) natural language understanding of intents and entities. Baseline results show that the ENIGMA-51 dataset poses a challenging benchmark to study human behavior in industrial scenarios.</p>
+                        <a href="https://github.com/fpv-iplab/ENIGMA-51/tree/master" target="_blank" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Code</a>
+                        <a href="#dataset" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Data</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Abstract End -->
+
+    <!-- Abstract xs-sd-md Start -->
+    <div class="container-xxl fs-6 pb-5 wow fadeInUp d-sm-block d-lg-none px-3" data-wow-delay="0.1s">
+        <div class="text-center">
+            <h6 class="section-title bg-white text-center text-primary px-3">Abstract</h6>
+        </div>
+        <div class="text-left mt-2">
+            <h4 class="text-primary mb-3 animated slideInDown"><a style="text-decoration:none">ENIGMA-51: Towards a Fine-Grained Understanding of Human Behavior in Industrial Scenarios</a></h4>
+            <p class="animated slideInRight">ENIGMA-51 is a new egocentric dataset acquired in an industrial scenario by 19 subjects who followed instructions to complete the repair of electrical boards using industrial tools (e.g., electric screwdriver) and equipments (e.g., oscilloscope). The 51 egocentric video sequences are densely annotated with a rich set of labels that enable the systematic study of human behavior in the industrial domain. We provide benchmarks on four tasks related to human behavior: 1) untrimmed temporal detection of human-object interactions, 2) egocentric human-object interaction detection, 3) short-term object interaction anticipation and 4) natural language understanding of intents and entities. Baseline results show that the ENIGMA-51 dataset poses a challenging benchmark to study human behavior in industrial scenarios.</p>
+        </div>
+        <div class="text-center">
+            <a href="https://github.com/fpv-iplab/ENIGMA-51/tree/master" target="_blank" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Code</a>
+            <a href="#dataset" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Data</a>
+        </div>
+    </div>
+    <!-- Abstract xs-sd-md End -->
+
+    <hr class="divider">
+
+    <!-- Annotation Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <a class="anchor" id="annotation"></a>
+        <div class="text-center">
+            <h6 class="section-title bg-white text-center text-primary px-3">The ENIGMA-51 Dataset</h6>
+        </div>
+        <div class="text-left text-lg-center mt-sm-2">
+            <p>ENIGMA-51 is a new dataset composed of 51 egocentric videos acquired in an industrial environment which simulates a real industrial laboratory. The dataset was acquired by 19 subjects who wore a Microsoft HoloLens 2 headset and followed audio and AR instructions provided by the device to complete repairing procedures on electrical boards. The subjects interact with industrial tools such as an electric screwdriver and pliers, as well as with electronic instruments such as a power supply and an oscilloscope while executing the steps to complete a specific procedure.
+                ENIGMA-51 has been annotated with a rich set of annotations which allows to study large variety of tasks, especially tasks related to human-object interactions.  </p>
+        </div>
+        <video class="img-fluid" src="video/enigma_16_videos.mp4" autoplay muted loop>
+            Your browser does not support the video tag.
+          </video>
+          
+
+    </div>
+    <!-- Annotation End -->
+
+    <hr class="divider">
+
+    <!-- Annotations Start -->
+    <div class="container-xxl py-5">
+        <a class="anchor" id="dataset"></a>
+        <div class="container">
+            <div class="row g-5">
+                
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">Data Annotation</h6>
+                    <p class="mb-2">We labelled the ENIGMA-51 dataset with a rich set of fine-grained annotations that can be used and combined to study different aspects of human behavior.
+                        <ul>
+                            <li> <b>51 egocentric videos</b> with a resolution of 2272x1278 pixels at 30 fps</li>
+                            <li> <b>22 hours</b> of video recordings</li>
+                            <li> <b>45505 RGB frames</b></li>
+                            <li> <b>2 procedures</b> consisting of instructions that involve humans interacting with the objects</li>
+                            <li> <b>14036 interactions</b> temporally annotated indicating the verbs which describe the actions performed</li>
+                            <li> <b>275135 objects</b> and <b>56473 hands</b> annotated with bounding boxes </li>
+                            <li> <b>12597 interaction frames</b> annotated with <b>14036 interactions</b> and <b>9342 active objects</b></li>
+                            <li> <b>37314 next-object interactions</b> annotated in past frames</li>
+                            <li> <b>4 basic verb classes</b>, and <b>25 objects classes</b></li>
+                            <li> <b>3D models</b> of the environment and the objects</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                    
+                    <div class="container">
+                        <div class="row g-4">
+                            
+                            <div class="col-lg-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="service-item text-center pt-3">
+                                    <div class="p-4">
+                                        <i class="fa fa-3x fa-play-circle text-primary mb-4"></i>
+                                        <h5 class="mb-3">Egocentric<br/> Videos</h5>
+                                        <h3 data-toggle="counter-up">51</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="service-item text-center pt-3">
+                                    <div class="p-4">
+                                        <i class="fa fa-3x fa-images text-primary mb-4"></i>
+                                        <h5 class="mb-3">RGB<br/> Images</h5>
+                                        <h3 data-toggle="counter-up">45505</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="service-item text-center pt-3">
+                                    <div class="p-4">
+                                        <i class="fa fa-3x fa-hand-paper text-primary mb-4"></i>
+                                        <h5 class="mb-3">Hand<br/> annotations</h5>
+                                        <h3 data-toggle="counter-up">56473</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="service-item text-center pt-3">
+                                    <div class="p-4">
+                                        <i class="fa fa-3x fa-object-group text-primary mb-4"></i>
+                                        <h5 class="mb-3">Object<br/> annotations</h5>
+                                        <h3 data-toggle="counter-up">275135</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.7s">
+                                <div class="service-item text-center pt-3">
+                                    <div class="p-4">
+                                        <i class="fa fa-3x fa-tools text-primary mb-4"></i>
+                                        <h5 class="mb-3">Interaction<br/> frames</h5>
+                                        <h3 data-toggle="counter-up">12597</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.7s">
+                                <div class="service-item text-center pt-3">
+                                    <div class="p-4">
+                                        <i class="fa fa-3x fa-list text-primary mb-4"></i>
+                                        <h5 class="mb-3">Next-object Interactions</h5>
+                                        <h3 data-toggle="counter-up">37314</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <img class="img-fluid" src="img/labels.svg" alt="" style="object-fit: cover;">
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-images text-primary mb-4"></i>
+                            <h5 class="mb-3">RGB Images</h5>
+                            <h3 data-toggle="counter-up">39304</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-hand-paper text-primary mb-4"></i>
+                            <h5 class="mb-3">Hand annotations</h5>
+                            <h3 data-toggle="counter-up">59860</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-tools text-primary mb-4"></i>
+                            <h5 class="mb-3">Object annotations</h5>
+                            <h3 data-toggle="counter-up">237985</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-list text-primary mb-4"></i>
+                            <h5 class="mb-3">EHOI annotations</h5>
+                            <h3 data-toggle="counter-up">35416</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Annotations End -->
+
+    <!-- Annotation Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <a class="anchor" id="download"></a>
+        <div class="text-center">
+            <h6 class="section-title bg-white text-center text-primary px-3">Download</h6>
+        </div>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="ribbon">Data</div>
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-file-video text-primary mb-4"></i>
+                            <h5 class="mb-3">Videos</h5>
+                            <a class="btn btn-primary" href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51-videos.zip">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="ribbon">Data</div>
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-image text-primary mb-4"></i>
+                            <h5 class="mb-3">Frames</h5>
+                            <a class="btn btn-primary" href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_frames.zip">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="ribbon">Data</div>
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-edit text-primary mb-4"></i>
+                            <h5 class="mb-3">Annotations</h5>
+                            <a class="btn btn-primary" href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_annotations_master.zip">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="ribbon">Data</div>
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-file-alt text-primary mb-4"></i>
+                            <h5 class="mb-3">Textual Procedures</h5>
+                            <a class="btn btn-primary" href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_procedures.zip">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="service-item text-center pt-3">
+                        <div class="ribbon">Data</div>
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-cube text-primary mb-4"></i>
+                            <h5 class="mb-3">3D Models</h5>
+                            <a class="btn btn-primary" href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51%203D%20Models.zip">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="1.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="ribbon">Features</div>
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-images text-primary mb-4"></i>
+                            <h5 class="mb-3">CLIP Features</h5>
+                            <a class="btn btn-primary" href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_CLIP_exported_features_ViT-L.zip">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="1.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="ribbon">Features</div>
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-file text-primary mb-4"></i>
+                            <h5 class="mb-3">DINOV2 Features</h5>
+                            <a class="btn btn-primary" href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_DINOV2_exported_features_ViTg.zip">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="1.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="ribbon">Additional</div>
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-hand-paper text-primary mb-4"></i>
+                            <h5 class="mb-3">Hands Keypoints (MMPOSE)</h5>
+                            <a class="btn btn-primary" href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_MMPOSE_hands_keypoints.zip">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="1.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="ribbon">Additional</div>
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-paint-brush text-primary mb-4"></i>
+                            <h5 class="mb-3">Segmentation Masks (SAMHQ)</h5>
+                            <a class="btn btn-primary" href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_SAMHQ_annotations.zip">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+      <!-- Annotation Start
+      <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <a class="anchor" id="download"></a>
+        <div class="text-center">
+            <h6 class="section-title bg-white text-center text-primary px-3">Data and Annotations download</h6>
+        </div>
+        <div class="text-left text-lg-center mt-sm-2">
+            <p>
+                <ul>
+                    <li>Data:<ul>
+                    <li><a href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51-videos.zip">Videos</a></li>
+                    <li><a href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_frames.zip">Frames</a></li>
+                </ul></li>
+                    <li><a href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_annotations_master.zip">Annotations</a></li>
+                    <li><a href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_procedures.zip">Textual Procedures</a></li>
+                    <li><a href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51%203D%20Models.zip">3D models</a></li>
+                    <li>Features:</li>
+                    <li><ul>
+                        <li><a href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_CLIP_exported_features_ViT-L.zip">CLIP</a></li>
+                        <li><a href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_DINOV2_exported_features_ViTg.zip">DINOV2</a></li>
+                    </ul></li>
+                    <li>Additional labels:</li>
+                    <li><ul>
+                        <li><a href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_DINOV2_exported_features_ViTg.zip">Hands keypoints (MMPOSE)</a></li>
+                        <li><a href="https://iplab.dmi.unict.it/sharing/ENIGMA-51/ENIGMA-51_SAMHQ_annotations.zip">Segmentation Masks (SAMHQ)</a></li>
+                    </ul></li>
+
+                
+                    </ul>
+            </p>
+        </div> 
+    </div>-->    
+    <!-- Annotation End -->
+
+
+    <hr class="divider">
+
+    <!-- Benchmark and baselines results -->
+    <!--<div class="container-xxl py-5 category">
+        <a class="anchor" id="approach"></a>
+
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Tasks</h6>
+            </div>
+             <div class="row g-3">
+                <div class="col-lg-12 col-md-12">
+                    <div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <video width="100%" autoplay="true" loop="" muted="" src="video/schema_rete_loop.mp4" type="video/mp4" ></video>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <div class="position-relative d-block overflow-hidden">
+                                <img class="img-fluid" src="img/graphical_ehoi_results.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow zoomIn" data-wow-delay="0.7s">
+                    <div class="position-relative d-block h-100 overflow-hidden">
+                        <video width="100%" autoplay="true" loop="" muted="" src="video/video_metodo.mp4" type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Benchmark and baselines results End -->
+
+    <hr class="divider">
+
+    <!-- Paper Start -->
+    <div class="container-xxl py-5">
+        <a class="anchor" id="paper"></a>
+
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Paper</h6>
+            </div>
+            <div class="container text-left">
+                <p class="mb-4"><i class="fa fa-arrow-right text-primary me-2"></i>F. Ragusa, R. Leonardi, M. Mazzamuto, C. Bonanno, R. Scavo, A. Furnari, G. M. Farinella. ENIGMA-51: Towards a Fine-Grained Understanding of Human-Object Interactions in Industrial Scenarios. 2023. Cite our paper: <a href="https://arxiv.org/abs/2309.14809">ArXiv</a>. </p>
+<pre>@article{ragusa2023enigma51,
+    title={ENIGMA-51: Towards a Fine-Grained Understanding of Human-Object Interactions in Industrial Scenarios}, 
+    author={Francesco Ragusa and Rosario Leonardi and Michele Mazzamuto and Claudia Bonanno and Rosario Scavo and Antonino Furnari and Giovanni Maria Farinella},
+    journal   = {IEEE Winter Conference on Application of Computer Vision (WACV)},
+    year      = {2024}
+}
+   
+</pre>
+                <p class="mb-4"><i class="fa fa-arrow-right text-primary me-2"></i>Visit our page dedicated to <a class="border-bottom" href="https://iplab.dmi.unict.it/fpv/" target="_blank">First Person Vision Research</a> for other related publications.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paper End -->
+
+    <!-- Supp Start -->
+    <div class="container-xxl py-5">
+        <a class="anchor" id="supp"></a>
+
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Supplementary</h6>
+            </div>
+            <div class="container text-left">
+                <p class="mb-4"><i class="fa fa-arrow-right text-primary me-2"></i>More details on the dataset, the annotation phase and the baselines can be found in the <a href="https://arxiv.org/abs/2309.14809">supplementary material</a> associated to the publication. </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supp End -->
+
+    <hr class="divider">
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <a class="anchor" id="people"></a>
+
+        <div class="container">
+            
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3 mb-5">People</h6>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/faces/FR.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://scholar.google.com/citations?user=_W8TnNgAAAAJ&hl=it&authuser=1" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://iplab.dmi.unict.it/ragusa/" target="_blank"><i class="fa fa-chalkboard"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Francesco <br/> Ragusa</h5>
+                            <small><a class="btn btn-link" href="https://iplab.dmi.unict.it/fpv/" target="_blank">FPV@IPLAB</a></small><br>
+                            <small><a class="btn btn-link" href="https://www.nextvisionlab.it/" target="_blank">Next Vision s.r.l.</a></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/faces/RL.jpeg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://scholar.google.com/citations?user=yKMoekcAAAAJ&hl=it&authuser=1" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Rosario <br/> Leonardi</h5>
+                            <small><a class="btn btn-link" href="https://iplab.dmi.unict.it/fpv/" target="_blank">FPV@IPLAB</a></small><br>
+                            <small><a class="btn btn-link" href="https://www.nextvisionlab.it/" target="_blank">Next Vision s.r.l.</a></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/faces/MM.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://scholar.google.com/citations?user=Ds2Zhf8AAAAJ&hl=it&oi=ao" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Michele <br/> Mazzamuto</h5>
+                            <small><a class="btn btn-link" href="https://iplab.dmi.unict.it/fpv/" target="_blank">FPV@IPLAB</a></small><br>
+                            <small><a class="btn btn-link" href="https://www.nextvisionlab.it/" target="_blank">Next Vision s.r.l.</a></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/faces/CB.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://scholar.google.com/citations?user=pAHqGVwAAAAJ&hl=it&oi=ao" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Claudia <br/> Bonanno</h5>
+                            <small><a class="btn btn-link" href="https://iplab.dmi.unict.it/fpv/" target="_blank">FPV@IPLAB</a></small><br>
+                            <small><a class="btn btn-link" href="https://www.nextvisionlab.it/" target="_blank">Next Vision s.r.l.</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/faces/RS.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://iplab.dmi.unict.it/fpv/" target="_blank"><i class="fa fa-chalkboard"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Rosario <br/> Scavo</h5>
+                            <small><a class="btn btn-link" href="https://iplab.dmi.unict.it/fpv/" target="_blank">FPV@IPLAB</a></small><br>
+                            <small><a class="btn btn-link" href="https://www.nextvisionlab.it/" target="_blank">Next Vision s.r.l.</a></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="1.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/faces/AF.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://scholar.google.com/citations?user=eXREn_EAAAAJ&hl=it&authuser=1" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.antoninofurnari.it/" target="_blank"><i class="fa fa-chalkboard"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Antonino <br/> Furnari</h5>
+                            <small><a class="btn btn-link" href="https://iplab.dmi.unict.it/fpv/" target="_blank">FPV@IPLAB</a></small><br>
+                            <small><a class="btn btn-link" href="https://www.nextvisionlab.it/" target="_blank">Next Vision s.r.l.</a></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-6 wow fadeInUp" data-wow-delay="1.3s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/faces/GMF.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://scholar.google.com/citations?user=YwQboCoAAAAJ&hl=it&authuser=1" target="_blank"><i class="fa fa-graduation-cap"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href="https://www.dmi.unict.it/farinella/" target="_blank"><i class="fa fa-chalkboard"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Giovanni Maria<br/> Farinella</h5>
+                            <small><a class="btn btn-link" href="https://iplab.dmi.unict.it/fpv/" target="_blank">FPV@IPLAB</a></small><br>
+                            <small><a class="btn btn-link" href="https://www.nextvisionlab.it/" target="_blank">Next Vision s.r.l.</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Loghi Start -->
+    <div class="container col-12 col-sm-12 col-lg-8 wow fadeIn" data-wow-delay="0.7s">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4 col-4">
+                <img class="img-fluid" src="./img/loghi/UniCT-Logo-Nero.png">
+            </div>
+            <div class="col-lg-4 col-sm-4 col-4">
+                <img class="img-fluid" src="./img/loghi/next_vision_logo.png">
+            </div>
+            <div class="col-lg-4 col-sm-4 col-4">
+                <img class="img-fluid" src="./img/loghi/iplablogo.jpg">
+            </div>
+        </div>
+    </div>
+    <!-- Loghi End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+        <div class="container">
+            <!-- Acknowledgments Start -->
+            <div class="row">
+                <p class="mb-4">This research is supported by Next Vision s.r.l., by MISE - PON I&C 2014-2020 - Progetto ENIGMA - Prog n. F/190050/02/X44 – CUP: B61B19000520008, and by the project Future Artificial Intelligence Research (FAIR) – PNRR MUR Cod. PE0000013 - CUP: E63C22001940006.</p>
+            </div>
+            <!-- Acknowledgments End -->
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="https://iplab.dmi.unict.it/" target="_blank">Image Processing Laboratory 2023</a>.
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com" target="_blank">HTML Codex</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
